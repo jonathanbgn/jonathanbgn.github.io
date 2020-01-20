@@ -24,7 +24,7 @@ email: jonathan@brandimage.io
 description: >- # this means to ignore newlines until "baseurl:"
   I write about machine learning, NLP, and the intersection of technology and marketing.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://jonathanbgn.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://jonathanbgn.com" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jonathanboigne
 linkedin_username: jonathan-boigne
 github_username:  jonathanbgn

@@ -39,6 +39,8 @@ theme: minima
 plugins:
   - jekyll-feed
 
+header_pages: false
+
 #show_excerpts: true
 
 # Exclude from processing.

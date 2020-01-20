@@ -387,6 +387,6 @@ What is really interesting is that GPT-2 is able to come up with catchy phrases 
 
 We would be able to get better results and less nonsense if we could fine-tune GPT2 longer. However the small size of the dataset makes it hard to train further without serious overfitting. It would be interesting to collect more data for this purpose, leveraging creative copy found on company websites for example. Building a bigger dataset would also allow us to use a much larger version of GPT-2, which can greatly improve the quality of the generation!
 
-Any other ideas for improvement? What do you think about using machine learning for creative tasks in general? Please let me know in the comments or by [email](mailto:jonathan@brandimage.io)!
+Any other ideas for improvement? What do you think about using machine learning for creative tasks in general? Please let me know in the comments or by [email](mailto:{{site.email}})!
 
 *You can find the full code and data on [GitHub](https://github.com/jonathanbgn/slogan-generator).*

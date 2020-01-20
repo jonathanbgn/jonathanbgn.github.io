@@ -11,4 +11,4 @@ I recently launched [BrandImage.io](https://www.brandimage.io/), a 100% free soc
 
 **I'm currently open to opportunities in machine learning or natural language processing.**
 
-You can reach me by [email](mailto:jonathan@brandimage.io) or on my [LinkedIn](https://www.linkedin.com/in/jonathan-boigne/).
+You can reach me by [email](mailto:{{site.email}}) or on my [LinkedIn](https://www.linkedin.com/in/jonathan-boigne/).

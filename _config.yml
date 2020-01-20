@@ -31,6 +31,9 @@ github_username:  jonathanbgn
 
 google_analytics: UA-156522905-1
 
+disqus:
+  shortname: jonathanbgn
+
 # Build settings
 theme: minima
 plugins:

@@ -5,7 +5,7 @@
 layout: home
 ---
 
-I am a software engineer who also worked as a brand strategy consultant for the past 2 and half year. Currently taking a gap year to experiment with the latest research in machine learning, I'm particularly interested about natural language processing and concrete business applications of machine learning.
+I am a software engineer who also worked as a brand strategy consultant for the past 2 and half year. Currently taking a gap year to experiment with the latest research in machine learning, I'm particularly interested about natural language processing and concrete business applications for AI.
 
 I recently launched [BrandImage.io](https://www.brandimage.io/), a 100% free social media listening tool for companies to better understand how people perceive them and their products. And how they could improve from constructive feedback. The application leverages some of the latest models from research like Google's BERT for language understanding to analyze and interpret consumer's points of view.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Building a Slogan Generator with GTP-2"
+title:  "Building a Slogan Generator with GPT-2"
 date:   2020-01-20 11:22:41 +0800
 categories: gpt2
 ---

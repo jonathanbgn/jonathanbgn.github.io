@@ -15,7 +15,7 @@ I wrote this post to share some of what I learned in my journey building [BrandI
 
 The goal here is not to beat the state-of-the-art accuracy but to offer a **practical guide** to the problem, so we will focus on straightforward and scalable solutions. Most attention will be given to different ways of pre-processing and representing the messages for classification, which in my experience is where 80% of the performance improvement happens! We will not build a large/deep model for the classification as this would make deployment harder. However we will look at BERT embeddings towards the end if you are interested in using more advanced representations.
 
-You can also find this guide on [Github](https://github.com/jonathanbgn/social-media-sentiment-analysis/blob/master/Practical_Introduction_BERT.ipynb) or [Google Colab](https://colab.research.google.com/github/jonathanbgn/social-media-sentiment-analysis/blob/master/Social_Media_Sentiment_Analysis.ipynb) to experiment with the code yourself.
+You can also find this guide on [Github](https://github.com/jonathanbgn/social-media-sentiment-analysis/blob/master/Practical_Introduction_BERT.ipynb) or [Google Colab](https://colab.research.google.com/github/jonathanbgn/social-media-sentiment-analysis/blob/master/Practical_Introduction_BERT.ipynb) to experiment with the code yourself.
 
 ## Data Preprocessing
 

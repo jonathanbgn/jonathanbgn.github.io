@@ -22,7 +22,7 @@ title: Jonathan Bgn
 author: Jonathan Boigne
 email: hello@jonathanbgn.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Building stuff with Machine Learning and Natural Language Processing.
+  Building stuff with machine learning and natural language processing.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jonathanbgn.com" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jonathanboigne
@@ -40,10 +40,7 @@ plugins:
   - jekyll-feed
 
 header_pages:
-  - title: Projects
-    url: "#personal-projects"
-  - title: Blog
-    url: "#blog"
+  - projects.md
 
 #show_excerpts: true
 

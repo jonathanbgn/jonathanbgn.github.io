@@ -9,7 +9,7 @@ Currently living in Taiwan, I recently joined the [Taiwan Bot 🤖](https://gith
 
 Building a functional and useful chatbot is a non-trivial project. Fortunately, there has been impressive progress in the fields of machine learning and **natural language processing (NLP)** in the past few years. Moreover, the democratization and open-source sharing of cutting-edge deep learning models from research work at large tech companies like Google or Facebook is making it possible for anyone to implement the latest state-of-the-art solutions.
 
-The [Universal Sentence Encoder](https://ai.googleblog.com/2018/05/advances-in-semantic-textual-similarity.html), released by Google, is one of these new models available to everyone via [Tensorflow Hub](https://tfhub.dev/google/universal-sentence-encoder/4). Trained in a **multi-tasking** fashion, the model can encode sentences into meaningful continuous representations that work well on a range of different tasks. It is thus ideal for **transfer learning** and performs competitively with more complex models like [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)). Moreover, it can run much faster than BERT or other similar [Transformer](https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)) models and is thus more applicable to real-world problems. There is even a [Lite version](https://tfhub.dev/google/universal-sentence-encoder-lite/2) of the model, small enough to run in Javascript on the client-side.
+The [Universal Sentence Encoder](https://ai.googleblog.com/2018/05/advances-in-semantic-textual-similarity.html), recently released by Google AI, is one of these new models available via [Tensorflow Hub](https://tfhub.dev/google/universal-sentence-encoder/4). Trained in a **multi-tasking** fashion, the model can encode sentences into meaningful continuous representations that work well on a range of different tasks. It is thus ideal for **transfer learning** and performs competitively with more complex models like [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)). Moreover, it can run much faster than BERT or other similar [Transformer](https://en.wikipedia.org/wiki/Transformer_(machine_learning_model)) models and is thus more applicable to real-world problems. There is even a [Lite version](https://tfhub.dev/google/universal-sentence-encoder-lite/2) of the model, small enough to run in Javascript on the client-side.
 
 ## The project
 
@@ -52,30 +52,33 @@ The [Universal Sentence Encoder](https://arxiv.org/abs/1803.11175) is a powerful
 
 For our chatbot project, we are first using the model to encode all the questions that we think users would want to ask to the bot. This can be done in a few lines of code thanks to the convenient TensorFlow Hub library:
 
-    import tensorflow as tf
-    import tensorflow_hub as tfhub
-    
-    model = tfhub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
+```python
+import tensorflow as tf
+import tensorflow_hub as tfhub
 
-    questions = [ ... ]  # questions most likely to be asked to the bot
-    answers = [ .... ]  # all answers to the questions above
+model = tfhub.load("https://tfhub.dev/google/universal-sentence-encoder/4")
 
-    batch_size = 10
-    embeddings = []
-    for i in range(0, len(questions), batch_size):
-        embeddings.append(model(questions[i:i+batch_size]))
-    questions_embeddings = tf.concat(embeddings, axis=0)
+questions = [ ... ]  # questions most likely to be asked to the bot
+answers = [ .... ]  # all answers to the questions above
+
+batch_size = 10
+embeddings = []
+for i in range(0, len(questions), batch_size):
+    embeddings.append(model(questions[i:i+batch_size]))
+questions_embeddings = tf.concat(embeddings, axis=0)
+```
 
 
 Then whenever a user asks a question, we can just extract its embedding and find the most similar question in our database of embeddings. In our case we use a simple vector dot product as a similary function:
 
-    def find_best_answer(question: str) -> str:
-        embedding = model([question,])
-        # compute dot product with each question:
-        scores = questions_embeddings @ tf.transpose(embedding)
-        
-        return answers[np.argmax(tf.squeeze(scores).numpy())]
+```python
+def find_best_answer(question: str) -> str:
+    embedding = model([question,])
+    # compute dot product with each question:
+    scores = questions_embeddings @ tf.transpose(embedding)
 
+    return answers[np.argmax(tf.squeeze(scores).numpy())]
+```
 
 ## Putting everything together
 

@@ -125,3 +125,9 @@ This logging system will also help us improve our answers as more people use the
 Building an effective chatbot doesn't have to be a complex project. As long as the scope is relatively narrow, it is possible to use a general encoder model like the Universal Sentence Encoder to build something useful. The hard part is collecting enough questions/answers for the bot to be able to answer most questions. It is also important to regularly monitor what users are asking and complement new data whenever the bot can't find a relevant answer.
 
 If you are also living or considering to move to Taiwan, you can [chat with Taiwan bot on Messenger here](https://m.me/thetaiwanbot)!
+
+### Read next
+
+[Unleash GPT-2 (and GPT-3) Creativity through Decoding Strategies]({% post_url 2020-08-30-gpt2-gpt3-creativity %})
+
+[Detecting Emotions from Voice with Very Few Training Data]({% post_url 2020-10-31-emotion-recognition-transfer-learning-wav2vec %})

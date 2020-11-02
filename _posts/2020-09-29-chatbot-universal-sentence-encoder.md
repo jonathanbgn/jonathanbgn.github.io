@@ -7,7 +7,7 @@ categories: nlp
 
 ![Taipei](/assets/images/taipei.jpg)
 
-Currently living in Taiwan, I recently joined the [Taiwan Bot 🤖](https://github.com/taiwangoldcard/taiwan-bot) project along with [Shawn](https://www.linkedin.com/in/shawn-lim-0a307550) and [Eric](https://twitter.com/eric_khun). The idea is to build a go-to assistant to help foreigners answer their questions about moving to, working, and living in Taiwan (pro-tip: ask the bot where to find cheese or chocolate).
+Currently living in Taiwan, I recently joined the [Taiwan Bot 🤖](https://github.com/taiwangoldcard/taiwan-bot) project along with [Shawn](https://www.linkedin.com/in/shawn-lim-0a307550) and [Eric](https://erickhun.com/about/). The idea is to build a go-to assistant to help foreigners answer their questions about moving to, working, and living in Taiwan (pro-tip: ask the bot where to find cheese or chocolate).
 
 Building a functional and useful chatbot is a non-trivial project. Fortunately, there has been impressive progress in the fields of machine learning and **natural language processing (NLP)** in the past few years. Moreover, the democratization and open-source sharing of cutting-edge deep learning models from research work at large tech companies like Google or Facebook is making it possible for anyone to implement the latest state-of-the-art solutions.
 

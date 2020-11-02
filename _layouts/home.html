@@ -4,8 +4,6 @@ layout: default
 
 <div class="home">
 
-  {{ content }}
-
   {%- if site.posts.size > 0 -%}
     <h2 id="blog" class="post-list-heading">{{ page.list_title | default: "Latest Posts" }}</h2>
     <ul class="post-list">
@@ -27,5 +25,7 @@ layout: default
 
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
   {%- endif -%}
+
+  {{ content }}
 
 </div>

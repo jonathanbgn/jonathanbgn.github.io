@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Building a Chatbot for Taiwan with Google's Universal Sentence Encoder"
+title: "Build a Collaborative Chatbot with Google Sheet and TensorFlow"
 date: 2020-09-29 22:00:00 +0800
 categories: nlp
 ---
@@ -15,7 +15,7 @@ The [Universal Sentence Encoder](https://ai.googleblog.com/2018/05/advances-in-s
 
 ## The project
 
-Despite being an amazing place to live (I might be biased cause I've been here for 5 years already), **Taiwan is still misunderstood by most foreigners**. We think that a fun and approachable chatbot could help people understand a lot more about all the great things this place has to offer, as well as answer most of the questions they might have about living here.
+Despite being an amazing place to live, **Taiwan is still misunderstood by most foreigners**. We think that a fun and approachable chatbot could help people understand a lot more about all the great things this place has to offer, as well as answer most of the questions they might have about living here.
 
 We decided to start with a limited scope first and to focus on answering practical questions about moving to and living in Taiwan. Specifically, we chose to focus on visa issues and the recently created [Gold Card program](https://taiwangoldcard.com). We plan to expand the bot capabilities in future versions.
 
@@ -82,13 +82,26 @@ def find_best_answer(question: str) -> str:
     return answers[np.argmax(tf.squeeze(scores).numpy())]
 ```
 
-## Putting everything together
+## Google Spreadsheet as a collaborative database 
 
 We built our dataset using a simple Google Spreadsheet with 2 columns: questions and answers. Whenever a user asks a question, we just find the most relevant question and return the appropriate answer.
 
 ![Questions Answers Dataset](/assets/images/taiwan-bot-database.png)
 
-This approach, while relatively simple, works quite well! Here is an example of a conversation with the bot:
+
+This approach, while relatively simple, is a flexible enough for efficiently working together. Querying the data is done once during startup with a few lines of code:
+
+```python
+client = gspread.authorize(
+    ServiceAccountCredentials.from_json_keyfile_dict(SERVICE_ACCOUNT_INFO_DICT,
+        ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive'])
+)
+sheet = client.open(SPREADSHEET_FAQ_FILE).worksheet(SPREADSHEET_SHEET_NAME)
+questions = list(map(str.strip, sheet.col_values(1)[1:]))
+answers = list(map(str.strip, sheet.col_values(2)[1:]))
+````
+
+Here is an example of a conversation with the bot:
 
 ![Conversation with the bot](/assets/images/taiwan-bot-conversation.jpg)
 
@@ -98,11 +111,14 @@ This approach, while relatively simple, works quite well! Here is an example of 
 
 We did our best to think about what would be the most commonly asked questions but, of course, we cannot predict everything people will ask. This is why if you ask a question that is not present in our database, the bot can answer with something completely unrelated. To prevent this, we built a small logging system to be able to track the questions asked to the bot and which question it thought was the most similar (along with the similarity score).
 
-For example, here is what happened behind the scenes during the small conversation above. The first column is the user message. The second column is the most similar question (as based on the embeddings similarity). The third column is the best answer and the last column the computed similarity score.
+For example, here is what happened behind the scenes during the small conversation above. The first column is the user message. The second column is the most similar question (as based on the embeddings similarity). The third column is the best answer and the last column the computed similarity score. If the similarity score is not good enough, the bot will answer with a generic reply *"Sorry, I can not help with that yet"*.
 
 ![Conversation Logs](/assets/images/taiwan-bot-logs.png)
 
-This logging system will help us improve our answers as more people use the bot and new edge cases are found.
+This logging system will also help us improve our answers as more people use the bot and new edge cases are found. Still no chatbot is perfect, and we think the bot will be most useful in context where humans can take over when the bot fails. For example, on Slack, we added the bot to a general FAQ channel where people can get assistance from both the bot and humans for more specific information.
+
+![Chatbot on Slack](/assets/images/taiwan-bot-slack.png)
+
 
 ## Conclusion
 

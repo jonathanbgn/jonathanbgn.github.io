@@ -7,7 +7,7 @@ categories: nlp
 
 ![Taipei](/assets/images/taipei.jpg)
 
-Currently living in Taiwan, I recently joined the [Taiwan Bot 🤖](https://github.com/taiwangoldcard/taiwan-bot) project along with [Shawn](https://www.linkedin.com/in/shawn-lim-0a307550) and [Eric](https://twitter.com/eric_khun). The idea is to build a go-to assistant to help foreigners answer their questions about moving to, working, and living in Taiwan (pro-tip: ask the bot for where to find cheese or chocolate).
+Currently living in Taiwan, I recently joined the [Taiwan Bot 🤖](https://github.com/taiwangoldcard/taiwan-bot) project along with [Shawn](https://www.linkedin.com/in/shawn-lim-0a307550) and [Eric](https://twitter.com/eric_khun). The idea is to build a go-to assistant to help foreigners answer their questions about moving to, working, and living in Taiwan (pro-tip: ask the bot where to find cheese or chocolate).
 
 Building a functional and useful chatbot is a non-trivial project. Fortunately, there has been impressive progress in the fields of machine learning and **natural language processing (NLP)** in the past few years. Moreover, the democratization and open-source sharing of cutting-edge deep learning models from research work at large tech companies like Google or Facebook is making it possible for anyone to implement the latest state-of-the-art solutions.
 
@@ -111,11 +111,11 @@ Here is an example of a conversation with the bot:
 
 We did our best to think about what would be the most commonly asked questions but, of course, we cannot predict everything people will ask. This is why if you ask a question that is not present in our database, the bot can answer with something completely unrelated. To prevent this, we built a small logging system to be able to track the questions asked to the bot and which question it thought was the most similar (along with the similarity score).
 
-For example, here is what happened behind the scenes during the small conversation above. The first column is the user message. The second column is the most similar question (as based on the embeddings similarity). The third column is the best answer and the last column the computed similarity score. If the similarity score is not good enough, the bot will answer with a generic reply *"Sorry, I can not help with that yet"*.
+For example, here is what happened behind the scenes during the small conversation above. The first column is the user message. The second column is the most similar question (as based on the embeddings similarity). The third column is the best answer and the last column the computed similarity score. If the similarity score is not good enough, the bot will answer with a generic reply *" Sorry, I cannot help with that yet "*.
 
 ![Conversation Logs](/assets/images/taiwan-bot-logs.png)
 
-This logging system will also help us improve our answers as more people use the bot and new edge cases are found. Still no chatbot is perfect, and we think the bot will be most useful in context where humans can take over when the bot fails. For example, on Slack, we added the bot to a general FAQ channel where people can get assistance from both the bot and humans for more specific information.
+This logging system will also help us improve our answers as more people use the bot and new edge cases are found. Still, no chatbot is perfect, and we think the bot will be most useful in a context where humans can take over when the bot fails. For example, on Slack, we added the bot to a general FAQ channel where people can get assistance from both the bot and humans for more specific information.
 
 ![Chatbot on Slack](/assets/images/taiwan-bot-slack.png)
 
@@ -124,4 +124,4 @@ This logging system will also help us improve our answers as more people use the
 
 Building an effective chatbot doesn't have to be a complex project. As long as the scope is relatively narrow, it is possible to use a general encoder model like the Universal Sentence Encoder to build something useful. The hard part is collecting enough questions/answers for the bot to be able to answer most questions. It is also important to regularly monitor what users are asking and complement new data whenever the bot can't find a relevant answer.
 
-If you are also living or considering to move to Taiwan, you can [chat with Taiwan bot on Messenger here](https://www.facebook.com/thetaiwanbot)!
+If you are also living or considering to move to Taiwan, you can [chat with Taiwan bot on Messenger here](https://m.me/thetaiwanbot)!

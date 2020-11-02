@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Build a Collaborative Chatbot with Google Sheet and TensorFlow"
+title: "Build a Collaborative Chatbot with Google Sheets and TensorFlow"
 date: 2020-09-29 22:00:00 +0800
 categories: nlp
 ---
@@ -82,9 +82,9 @@ def find_best_answer(question: str) -> str:
     return answers[np.argmax(tf.squeeze(scores).numpy())]
 ```
 
-## Google Spreadsheet as a collaborative database 
+## Google Sheets as a collaborative database 
 
-We built our dataset using a simple Google Spreadsheet with 2 columns: questions and answers. Whenever a user asks a question, we just find the most relevant question and return the appropriate answer.
+We built our dataset using a simple Google spreadsheet with 2 columns: questions and answers. Whenever a user asks a question, we just find the most relevant question and return the appropriate answer.
 
 ![Questions Answers Dataset](/assets/images/taiwan-bot-database.png)
 

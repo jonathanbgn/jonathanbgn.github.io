@@ -9,7 +9,7 @@ categories: speech
 
 Speech emotion recognition has become more and more popular over recent years, largely because of the large range of applications enabled by the technology in fields ranging from human-computer interaction to healthcare. Tech giants have also seen this future potential and have been launching new products such as the [Amazon Halo](https://www.theverge.com/2020/8/27/21402493/amazon-halo-band-health-fitness-body-scan-tone-emotion-activity-sleep) which can detect emotions in real-time from the voice. However, there are still some challenges that need to be surpassed to unleash the full potential of Emotion AI.
 
-Recently, I've been collaborating with WonderTech, a leader in Emotion AI, to improve emotion recognition in situations where training data is scarce. Long story short, we obtained **very competitive performance with a little more than 100 training examples per emotion** (each example is ~5 seconds). Our model was able to perform well thanks to the use of pre-trained representations, extracted from **Facebook AI's wav2vec model**.
+Recently, I've been working on improving emotion recognition in situations where training data is scarce. Long story short, we obtained **very competitive performance with a little more than 100 training examples per emotion** (each example is ~5 seconds). Our model was able to perform well thanks to the use of pre-trained representations, extracted from **Facebook AI's wav2vec model**.
 
 ## Challenges
 
@@ -91,12 +91,7 @@ To answer this, we built a multimodal model using attention to align the speech 
 
 ## Conclusion
 
-Our research clearly shows the potential of transfer learning for emotion recognition. The re-use of unsupervised representation allows for accurate models even when training data is scarce. Still, enough labeled data will be needed to reach optimal performance and mitigate risk in sensitive applications such as mental health. **Data diversity** is especially important to allow models to work for any person speaking, **no matter the language, dialect, accent, gender, or age**. This is why WonderTech decided to build [EmotionNet](https://emotionnet.org), the world's largest emotion dataset.
+Our research clearly shows the potential of transfer learning for emotion recognition. The re-use of unsupervised representation allows for accurate models even when training data is scarce. Still, enough labeled data will be needed to reach optimal performance and mitigate risk in sensitive applications such as mental health. **Data diversity** is especially important to allow models to work for any person speaking, **no matter the language, dialect, accent, gender, or age**.
 
 The research in transfer learning and self-supervised learning for speech applications is also moving fast. Since the original version of wav2vec, Facebook has been releasing two subsequent iterations of the model: [vq-wav2vec](https://research.fb.com/publications/vq-wav2vec-self-supervised-learning-of-discrete-speech-representations/) and [wav2vec 2.0](https://ai.facebook.com/blog/wav2vec-20-learning-the-structure-of-speech-from-raw-audio/), the latter inspired by the masked language modeling objective function of BERT.
-
-For more details about our methodology and model, you can go [here](https://www.preprints.org/manuscript/202008.0645/v1) to read our full research paper.
-
-
-
 

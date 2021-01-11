@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Rise and Rise of Self-Supervised Learning"
+title: "The Rise of Self-Supervised Learning"
 date: 2020-12-31 12:00:00 +0800
 ---
 

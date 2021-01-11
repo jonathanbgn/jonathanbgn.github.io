@@ -8,13 +8,15 @@ date: 2020-12-31 12:00:00 +0800
 
 Since the deep learning wave started in the early 2010s, there has been much hype and disappointments, as many feel that AI often failed to deliver. A big part of this is due to unrealistic expectations driven by research progress that do not translate well in real-world applications. But why? What is it that is so different between the academic world and the industry?
 
-I want to expand here a bit on this particular challenge and explain **why the paradigm that we call self-supervised learning could be about to change this**. Self-supervision is not new, but it has seen a resurgence of interest over the past few years thanks to heavily-mediatized successes like [GPT-3](https://en.wikipedia.org/wiki/GPT-3) or [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)). Some AI pundits have also been relentlessly popularizing the idea, like Yann Lecun with his [cake analogy](https://syncedreview.com/2019/02/22/yann-lecun-cake-analogy-2-0/). I will first share a bit about the motivation and history behind the concept. I will follow with some examples of its impact on some of the main machine learning domains.
+I want to expand here a bit on this particular challenge and explain **why the paradigm that we call self-supervised learning could be about to change this**. Self-supervision is not new, but it has seen a resurgence of interest over the past few years thanks to mediatized successes like [GPT-3](https://en.wikipedia.org/wiki/GPT-3) or [BERT](https://en.wikipedia.org/wiki/BERT_(language_model)). AI pundits have also been relentlessly popularizing the idea, like Yann Lecun with his [cake analogy](https://syncedreview.com/2019/02/22/yann-lecun-cake-analogy-2-0/).
+
+I will first share a bit about the motivation and history behind the concept, and then follow with some examples of its impact on some of the main machine learning domains today.
 
 # It’s all about (labeled) data
 
 By now, you must have heard once or twice about the importance of data. According to some, it might even be the “new oil”. Yet not all data is equal. What we care the most about is **labeled data: data that has been manually annotated by humans**. It is now commonly accepted that deep learning works incredibly well on tasks where large labeled datasets are available.
 
-The most famous example of such large datasets is [ImageNet]([AlexNet model architecture](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) ), a collection of 1+ million of images manually annotated by humans. ImageNet was a critical component in the rise of deep learning, and AI researchers often talk about the [ImageNet Moment](https://en.wikipedia.org/wiki/ImageNet#Significance_for_deep_learning). In 2012, a deep learning model called [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) trained on ImageNet surpassed all other methods on image classification for the first time. The major innovation behind this success was the availability of this huge collection of labeled data, rather than AlexNet's architecture itself. Indeed, the AlexNet architecture is strikingly similar to the 1998’s [LeNet-5](https://en.wikipedia.org/wiki/LeNet) architecture, except of course that it is much larger and deeper[^1].
+The most famous example of such large datasets is [ImageNet]([AlexNet model architecture](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) ), a collection of 1+ million of images manually annotated by humans. ImageNet was a critical component of the rise of deep learning, and AI researchers often talk about the [ImageNet Moment](https://en.wikipedia.org/wiki/ImageNet#Significance_for_deep_learning). In 2012, a deep learning model called [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) trained on ImageNet surpassed all other methods on image classification for the first time. The major innovation behind this success was the availability of this huge collection of labeled data, rather than AlexNet's architecture itself. Indeed, the AlexNet architecture is strikingly similar to the 1998’s [LeNet-5](https://en.wikipedia.org/wiki/LeNet) architecture, except of course that it is much larger and deeper[^1].
 
 
 # Traditional supervised learning is not the best solution for the real world
@@ -79,22 +81,16 @@ An important point here is the choice of the pretext task. This task must make s
 
 # Robust performance on small data
 
-While we still need some domain-specific labeled data for the second fine-tuning step, pre-training first in a self-supervised way has been shown to immensely improve the performance on the downstream task, even when very few labeled data is available for fine-tuning. For example, the [ULMFiT paper](https://arxiv.org/abs/1801.06146) showed that it is possible to reach great performance for text classification with only 100 labeled examples. More recently, a new paper from DeepMind outperformed the original AlexNet performance on ImageNet with only 13 labeled examples per class.
-
-![Computer Vision Datasets](/assets/images/cpc_self_supervised_performance.png)
-
-[Data-Efficient Image Recognition with Contrastive Predictive Coding](https://arxiv.org/pdf/1905.09272.pdf)
-
-
+While we still need some domain-specific labeled data for the second fine-tuning step, pre-training first in a self-supervised way has been shown to immensely improve the performance on the downstream task, even when very few labeled data is available for fine-tuning. For example, the [ULMFiT paper](https://arxiv.org/abs/1801.06146) showed that it is possible to reach great performance for text classification with only 100 labeled examples. More recently, a new paper from DeepMind outperformed the original AlexNet performance on ImageNet with **only 13 labeled examples per class**.
 
 
 #### Self-supervised learning does not remove the need for labeled data, but it greatly reduces the need for it and makes it practical to deploy deep learning models for use cases in which labeled data is (very) limited.
 
 And this is exactly why it might be the key to unlock the promises of deep learning in real-world applications and for the industry. Think about it, since the digital revolution began, companies have been collecting tons of proprietary data in the hope of profiting from it in the future. However, they don’t know what to do with it so far as most of it is messy, unstructured, and most importantly unlabeled. Bringing self-supervised learning in the equation could help unleash the latent value from these tons of data.
 
+# The state of self-supervised learning in 2021
 
-
-# Natural language processing
+#### Natural language processing
 
 NLP is the first field in which self-supervised learning first became hugely popular, and as such has many examples of the technique. The most straight-forward example that I already mentioned in the language model, predicting the next word in a sentence. Despite being one of the earliest examples of the method, it is still popular today due to big models like GPT-3.
 
@@ -107,16 +103,20 @@ The quest for the optimal pretext task is far from complete! Just this month at 
 ![Paraphrasing](/assets/images/nlp_paraphrasing.png)
 
 
-# Computer vision
+#### Computer vision
 
 Unlike NLP, self-supervision has not yet seen widespread adoption here, mostly because current techniques are still a bit too complex to implement. Yet this might change very soon. Influenced by the success of the concept in NLP, research has been very active in the area. This year alone, there has been an explosion of papers on self-supervised learning in image recognition. Performance obtained through self-supervision is starting to match end-to-end supervised models even when labeled data is abundant like for ImageNet.
 
 [Many kinds of pretext tasks](https://www.fast.ai/2020/01/13/self_supervised/) are being used today, such as colorization (black & white to colors), patch placement (ordering patches cut from an image like a puzzle), or inpainting (filling an automatically created gap). One of the most interesting ideas of the moment is the one of contrastive learning. A neural network is trained to generate consistent representations between different views of the same image (randomly transformed by cropping or rotation), but distant representations between different images. A good example of the idea is the [SimCLR framework](https://ai.googleblog.com/2020/04/advancing-self-supervised-and-semi.html) from Google.
 
+![Contrastive Predictive Coding](/assets/images/cpc_self_supervised_performance.png)
+
+[Data-Efficient Image Recognition with Contrastive Predictive Coding](https://arxiv.org/pdf/1905.09272.pdf)
+
 There are still some important problems that must be solved before we see wider adoption of self-supervision in vision. Often, many "tricks" (data augmentation, negative sampling...) are used during the self-supervised phase, and these can be very domain-specific and hard to implement. Moreover, the losses can be quite complex, and difficult to optimize properly.
 
 
-# Speech processing
+#### Speech processing
 
 Last but not least, self-supervised learning is also just starting to gain traction in speech processing. I am personally very enthusiastic about the future of this field, as I’m currently working on [Speech Emotion Recognition]({% post_url 2020-10-31-emotion-recognition-transfer-learning-wav2vec %}), a hard task for which labeled data is extremely scarce. Using self-supervised learning, we were able to beat strong baselines while **using only 100 examples per emotion** and [improve upon the state-of-the art](https://arxiv.org/abs/2011.05585) when using all data. I deeply believe that self-supervised learning is the key that will allow the emotion recognition field to make large progress in the coming years, and progress from basic emotion detection to more complex characterization of moods and states-of-mind.
 

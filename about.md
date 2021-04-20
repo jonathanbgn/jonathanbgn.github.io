@@ -3,11 +3,13 @@ title: About Me
 layout: page
 ---
 
-![Me](/assets/images/me.jpg){:style="width: 33%; margin-left: 20px; float: right"}
 
-I am a **machine learning engineer** with 10+ years of programming experience. My focus is mainly on **natural language processing** (NLP), text/speech classification, sentiment analysis, emotion recognition, language generation, language models, transfer learning.
 
-I learned programming when I was 12, building web apps and video games. I went on to study Computer Science at [INSA Lyon](https://www.insa-lyon.fr) in France and [Tsinghua University](https://www.tsinghua.edu.cn/en/) in Beijing. While at school, I co-founded [City Domination](https://www.citydomination.games), one of the first mobile games taking advantage of geo-localization on smartphones (before Ingress or Pokemon Go). The game got acquired and is still running strong today, with 1 million players in 170 countries.
+I am a **machine learning engineer** with 10+ years of programming experience. My focus is mainly on **natural language processing** (NLP), text/speech classification, sentiment analysis, emotion recognition, language generation, language models, transfer learning. I currently live in **Taiwan**.
+
+![Me](/assets/images/me.jpeg){:style="width: 50%; margin-left: 20px; float: right"}
+
+I learned programming when I was 12, building web apps and small video games. I went on to study Computer Science at [INSA Lyon](https://www.insa-lyon.fr) in France and [Tsinghua University](https://www.tsinghua.edu.cn/en/) in Beijing. While at school, I co-founded [City Domination](https://www.citydomination.games), one of the first mobile games taking advantage of geo-localization on smartphones (before Ingress or Pokemon Go). The game got acquired and is still running strong today, with 1 million players in 170 countries.
 
 After graduating, I took an interest in the business side of tech products. I first became a product manager at private cloud provider [Synology](https://www.synology.com) and then a brand strategy consultant at [RedPeak](https://www.red-peak.com), working with large tech multinationals and startups in the Artificial Intelligence, smartphone, PC, IoT, and semiconductors industries.
 

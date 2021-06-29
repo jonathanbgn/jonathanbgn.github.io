@@ -17,6 +17,4 @@ Two years ago, after working on many exciting AI projects with my consulting cli
 
 As someone with an understanding of both tech and business sides, I am particularly interested in concrete business applications for AI. On this blog, you can find some of my thoughts and projects in this space. I hope you will enjoy your visit!
 
-**I'm currently open to opportunities in machine learning or natural language processing.**
-
 You can reach me by [email](mailto:{{site.email}}) or on my [LinkedIn](https://www.linkedin.com/in/jonathan-boigne/).

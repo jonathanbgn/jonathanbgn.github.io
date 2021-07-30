@@ -49,7 +49,7 @@ The DSM has been overly criticized for its rigidity and sometimes arbitrary choi
 
 To assist doctors in the diagnosis and monitoring of their patients, a variety of tests and questionnaires have also been developed. Some need to be conducted by a doctor, who questions the patient to observe and rate eventual symptoms, but others can be self-performed by the patients themselves. The outcome of such tests is a final score that classifies the patient into different categories such as *no depression*, *mild depression*, or *severe depression*. The gold standard of such assessment tools is the [Hamilton Rating Scale for Depression (HAMD)](https://en.wikipedia.org/wiki/Hamilton_Rating_Scale_for_Depression), but many more exist and are used in different situations.
 
-![PHQ-9 scoring](/assets/images/depression/PHQ-9_scoring.png){: width="600" style="max-width: 100%; display: block; margin: auto;"}
+![PHQ-9 scoring](/assets/images/depression/phq-9_scoring.png){: width="600" style="max-width: 100%; display: block; margin: auto;"}
 
 A questionnaire worth mentioning is the [PHQ-9 (Patient Health Questionnaire)](https://en.wikipedia.org/wiki/PHQ-9). It is often used for labeling datasets before training machine learning models, mostly because of its simplicity: it consists of only 9 questions about the loss of appetite, energy, sleeping trouble, etc. for which patients can answer from "Not at all" to "Nearly every day". Patients can self-conduct the questionnaire in less than 3 minutes. This convenience makes it an ideal choice for regular testing over long periods.
 

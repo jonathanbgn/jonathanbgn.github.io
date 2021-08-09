@@ -61,7 +61,7 @@ A questionnaire worth mentioning is the [PHQ-9 (Patient Health Questionnaire)](h
 
 ![Prozac advertisement](/assets/images/depression/prozac_ad.jpg){:width="300" style="max-width: 50%; float: right; margin-left: 20px;"}
 
-Despite efforts to standardize classification like the DSM or assessment tests described above, health care professionals still don't agree on the exact requirements and threshold for depression. **Experienced psychiatrists and psychologists often come up with different diagnoses for the same patients, [in more than 30% of cases](https://onlinelibrary.wiley.com/doi/10.1002/cpp.693)**. Interestingly, there are about the same number of research papers claiming that depression is over-diagnosed as claiming it is under-diagnosed.
+Despite the standardization efforts mentioned above, health care professionals still don't agree on the exact requirements and threshold for depression. A [meta-analysis across 41 studies](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(09)60879-5/fulltext) found that **general practitioners are only able to identify depression in 47% of cases**. Even experienced psychiatrists and psychologists often come up with **different diagnoses for the same patients, [in more than 30% of cases](https://onlinelibrary.wiley.com/doi/10.1002/cpp.693)**. Interestingly, there are about the same number of research papers claiming that depression is over-diagnosed as claiming it is under-diagnosed.
 
 **There are important consequences to a wrong diagnosis for treatment.** The World Health Organization stated that a major barrier to effective care is inaccurate assessment: in countries of all income levels, people who are depressed are often not correctly diagnosed, and others who do not have the disorder are too often misdiagnosed and prescribed drugs. In the US, antidepressants are now the [3rd most common prescription medication](https://www.health.harvard.edu/blog/astounding-increase-in-antidepressant-use-by-americans-201110203624).
 
@@ -134,6 +134,12 @@ The field of speech processing, however, (and also deep learning in general) is 
 *Speech processing is more and more working with raw audio directly as input (here processed by a dilated convolutional neural network). Image credit: [Wavenet model from DeepMind](https://arxiv.org/pdf/1609.03499.pdf)*
 
 Speech can also be combined with linguistics features for better performance. A first automatic speech recognition model transcribes the audio to text, and a separate model is used to recognize statistical patterns of expressions from the text.
+
+### Current state of speech depression detection
+
+In 2016 the Audio-Visual Emotion Challenge organized a competition to detect depression from a [dataset of recorded interviews](https://dcapswoz.ict.usc.edu) from depressed and healthy individuals. One of the most performant models was able to successfully screen 100% of depressed patients from [segments of four seconds of speech](https://dl.acm.org/doi/abs/10.1145/2988257.2988267) (although the precision was only 35%, meaning that 65% of depression predictions were false positive). Two years later, on the same dataset, an MIT research team improved the [precision to 71% (recall 83%)](https://news.mit.edu/2018/neural-network-model-detect-depression-conversations-0830) by modeling the sequence of questions in the interview as well as combining speech features with linguistic features.
+
+Today, multiple companies claim to detect depression from speech with [twice the accuracy of human practicioners](https://www.forbes.com/sites/ganeskesari/2021/05/24/ai-can-now-detect-depression-from-just-your-voice/), using as little as 20 seconds of voice data. Our team at [WonderTech](https://www.wondertech.ai) is currently working on pushing the state-of-the-art through new paradigms in machine learning such as transfer learning and self-supervised learning.
 
 ### The benefits of the speech-based approach
 

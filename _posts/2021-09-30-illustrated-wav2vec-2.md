@@ -6,7 +6,7 @@ date: 2021-09-30 22:00:00 +0800
 
 Transformer-based neural networks have been revolutionizing the natural language processing field, but are only starting to become popular in the speech processing community. **Wav2vec 2.0** is set to change that. Its architecture is based on the Transformer's encoder, with a training objective similar to **BERT's masked language modeling** objective, but adapted for speech.
 
-This new method allows for efficient [semi-supervised training](https://en.wikipedia.org/wiki/Semi-supervised_learning): first, pre-train the model on a large quantity of unlabeled speech, then fine-tune on a smaller labeled dataset. In [wav2vec 2.0's original paper](https://proceedings.neurips.cc/paper/2020/hash/92d1e1eb1cd6f9fba3227870bb6d7f07-Abstract.html), the authors demonstrated that fine-tuning the model on only 1 hour of labeled speech data could beat the previous state-of-the-art systems trained on 100 times more labeled data.
+This new method allows for efficient [semi-supervised training](https://en.wikipedia.org/wiki/Semi-supervised_learning): first, pre-train the model on a large quantity of unlabeled speech, then fine-tune on a smaller labeled dataset. In [wav2vec 2.0's original paper](https://proceedings.neurips.cc/paper/2020/hash/92d1e1eb1cd6f9fba3227870bb6d7f07-Abstract.html), the authors demonstrated that fine-tuning the model on only one hour of labeled speech data could beat the previous state-of-the-art systems trained on 100 times more labeled data.
 
 ![Wav2vec 2.0 Architecture Overview](/assets/images/illustrated-wav2vec/wav2vec2_architecture_pretraining.png)
 
@@ -56,6 +56,8 @@ This concludes our tour of wav2vec 2.0 and its pre-training process. The resulti
 
 
 #### Read next
+
+[HuBERT: How to Apply BERT to Speech, Visually Explained]({% post_url 2021-10-30-hubert-visually-explained %})
 
 [The Illustrated Wav2vec 1.0]({% post_url 2021-06-29-illustrated-wav2vec %})
 

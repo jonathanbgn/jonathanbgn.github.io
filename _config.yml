@@ -25,14 +25,14 @@ description: >- # this means to ignore newlines until "baseurl:"
   Building stuff with machine learning and natural language processing.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jonathanbgn.com" # the base hostname & protocol for your site, e.g. http://example.com
-#twitter_username: jonathanboigne
+twitter_username: jonathanbgn
 linkedin_username: jonathan-boigne
 github_username:  jonathanbgn
 
 google_analytics: UA-156522905-1
 
-disqus:
-  shortname: jonathanbgn
+#disqus:
+#  shortname: jonathanbgn
 
 # Build settings
 theme: minima

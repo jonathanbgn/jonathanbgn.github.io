@@ -14,7 +14,9 @@ The method draws inspiration from the [DeepCluster paper](https://research.fb.co
 
 ### Differences with wav2vec 2.0
 
-At first glance HuBERT can look very similar to the [wav2vec 2.0 model]({% post_url 2021-09-30-illustrated-wav2vec-2 %}): **both use the same convolutional network followed by a transformer encoder**. However, their training processes are very different and HuBERT's performance when fine-tuned for automatic speech recognition either matches or improves upon wav2vec 2.0. Here are the important differences to keep in mind:
+*<u>Note:</u> Have a look at [An Illustrated Tour of Wav2vec 2.0]({% post_url 2021-09-30-illustrated-wav2vec-2 %}) for a detailed explanation of the model.*
+
+At first glance, HuBERT looks very similar to **wav2vec 2.0**: both models use the same convolutional network followed by a transformer encoder. However, their training processes are very different, and HuBERT’s performance, when fine-tuned for automatic speech recognition, either matches or improves upon wav2vec 2.0. Here are the key differences to keep in mind:
 
 **HuBERT uses the cross-entropy loss**, instead of the more complex combination of contrastive loss + diversity loss used by wav2vec 2.0. This makes training easier and more stable since this is the same loss that was used in the [original BERT paper](https://arxiv.org/abs/1810.04805v2).
 

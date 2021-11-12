@@ -2,6 +2,8 @@
 layout: post
 title: "HuBERT: How to Apply BERT to Speech, Visually Explained"
 date: 2021-10-30 16:00:00 +0800
+image: /assets/images/illustrated-hubert/hubert_explained.png
+description: "Illustrated architecture and training process of HuBERT, a model for self-supervised speech representation."
 ---
 
 Research in [self-supervised learning]({% post_url 2020-12-31-self-supervised-learning %}) for speech has been accelerating since the original [wav2vec model]({% post_url 2021-06-29-illustrated-wav2vec %}) released by Facebook AI in 2019. **HuBERT** is one of the latest of such models, with an open-source implementation already available in HuggingFace's Transformers library.

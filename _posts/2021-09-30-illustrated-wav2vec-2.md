@@ -2,6 +2,8 @@
 layout: post
 title: "An Illustrated Tour of Wav2vec 2.0"
 date: 2021-09-30 22:00:00 +0800
+image: /assets/images/illustrated-wav2vec/wav2vec2_architecture_pretraining.png
+description: "Self-supervised learning of speech representations explained visually."
 ---
 
 Transformer-based neural networks have been revolutionizing the natural language processing field, but are only starting to become popular in the speech processing community. **Wav2vec 2.0** is set to change that. Its architecture is based on the Transformer's encoder, with a training objective similar to **BERT's masked language modeling** objective, but adapted for speech.

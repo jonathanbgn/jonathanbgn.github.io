@@ -10,7 +10,7 @@ In speech processing, we recently saw a wave of new transformer-based models lev
 
 ![A Timeline of Transformers for Speech](/assets/images/transformers-speech/timeline-transformers-speech.png)
 
-I'd like to cover here some of the most impactful transformer-based speech models of recent years. This list is not exhaustive as we recently saw an explosion of such models. I've done my best to compile a representative timeline, with a focus on self-supervised models and ASR-related solutions.
+I'd like to cover here some of the most impactful transformer-based speech models of recent years. This list is not exhaustive as we recently saw an explosion of such models. I also focused mainly here on self-supervised models and ASR-related solutions.
 
 ---
 
@@ -47,7 +47,7 @@ The authors report improved performance on a variety of downstream tasks like ph
 
 ### DiscreteBERT
 
-With the same architecture and training process as vq-wav2vecl, DiscreteBERT confirms the benefits of using discrete units as an input for the transformer encoder rather than continuous features. There is some slight difference in the training approach compared to vq-wav2vec, and you can have a look at [the paper](https://arxiv.org/abs/1911.03912) for more details.
+With the same architecture and training process as vq-wav2vec, DiscreteBERT confirms the benefits of using discrete units as an input for the transformer encoder rather than continuous features. There is some slight difference in the training approach compared to vq-wav2vec, and you can have a look at [the paper](https://arxiv.org/abs/1911.03912) for more details.
 
 ![Architecture of DiscreteBERT](/assets/images/transformers-speech/discrete-bert.png)
 

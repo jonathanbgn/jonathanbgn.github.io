@@ -43,7 +43,6 @@ markdown: kramdown
 highlighter: rouge
 
 header_pages:
-  - about.md
   - projects.md
 
 #show_excerpts: true
